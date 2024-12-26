@@ -39,7 +39,7 @@ const experience = {
         {
             date: "September/2024 - Present",
             title: "Backend Web Developer",
-            company: "UNILLANTAS S.A. DE C.V.",
+            company: "Unillantas de Oaxaca S.A. DE C.V.",
             description: "I work as a Backend Developer at UNILLANTAS, using tools like Laravel, MySQL, .NET and PostgreSQL. I've been involved in creating applications to improve internal management and the sales system."
         }
     ],
@@ -47,7 +47,7 @@ const experience = {
         {
             date: "Septiembre/2024 - Presente",
             title: "Desarrollador Web Backend",
-            company: "UNILLANTAS S.A. DE C.V.",
+            company: "Unillantas de Oaxaca S.A. DE C.V.",
             description: "Trabajo como desarrollador Backend en UNILLANTAS, utilizando herramientas como Laravel, MySQL, .NET y PostgreSQL. He trabajado en la creación de aplicaciones para mejorar la gestión interna y el sistema de ventas."
         }
     ]
