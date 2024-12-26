@@ -39,7 +39,7 @@ const experience = {
         {
             date: "September/2024 - Present",
             title: "Backend Web Developer",
-            company: "Unillantas de Oaxaca S.A. DE C.V.",
+            company: "Unillantas de Oaxaca S.A. de C.V.",
             description: "I work as a Backend Developer at UNILLANTAS, using tools like Laravel, MySQL, .NET and PostgreSQL. I've been involved in creating applications to improve internal management and the sales system."
         }
     ],
@@ -47,7 +47,7 @@ const experience = {
         {
             date: "Septiembre/2024 - Presente",
             title: "Desarrollador Web Backend",
-            company: "Unillantas de Oaxaca S.A. DE C.V.",
+            company: "Unillantas de Oaxaca S.A. de C.V.",
             description: "Trabajo como desarrollador Backend en UNILLANTAS, utilizando herramientas como Laravel, MySQL, .NET y PostgreSQL. He trabajado en la creación de aplicaciones para mejorar la gestión interna y el sistema de ventas."
         }
     ]
@@ -58,7 +58,7 @@ const education = {
         {
             date: "August/2022 - Present",
             title: "Programming",
-            institution: "CBTis 265",
+            institution: "CBTis 265.",
             description: "I'm studying at CBTis 265, Oaxaca, in the programming course, where I've learned and developed skills in various technologies, with a focus on backend programming and web development. Although most of my knowledge is self-taught."
         }
     ],
@@ -66,7 +66,7 @@ const education = {
         {
             date: "Agosto/2022 - Presente",
             title: "Programación",
-            institution: "CBTis 265",
+            institution: "CBTis 265.",
             description: "Estoy cursando mi educación en el CBTis 265, Oaxaca, en la carrera de programación, donde he aprendido y desarrollado habilidades en diversas tecnologías, con especial énfasis en programación backend y desarrollo web. Aunque mayormente todo mi conocimiento es por cuenta propia."
         }
     ]
