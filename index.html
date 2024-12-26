@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis López | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="app.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+                <div class="nav-right"><button class="nav-icon" onclick="scrollToSection('#profile')">
+                    <i class="fas fa-home"></i>
+                </button>
+                <button class="nav-icon" onclick="scrollToSection('#projects')">
+                    <i class="fas fa-code"></i>
+                </button>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="language-toggle" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span class="language-text">EN</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="profile" class="profile-card">
+            <div class="profile-header">
+                <img src="images/profile-pic.png" alt="Profile Picture" class="profile-pic">
+                <h1>Hi! I'm Luis Eduardo López Cruz</h1>
+                <p class="subtitle">Backend Web Developer</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="mailto:personallopezcruzluis@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/DexulDev" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/luis-eduardo-lópez-cruz-766224333" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </section>
+
+        <section class="about-card">
+            <h2>About me</h2>
+            <p>Personal description here...</p>
+        </section>
+
+        <section class="skills-card">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-icon"><i class="fab fa-laravel"></i></div>
+                <div class="skill-icon"><i class="fab fa-php"></i></div>
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                <div class="skill-icon"><i class="fab fa-java"></i></div>
+                <div class="skill-icon"><i class="fab fa-js"></i></div>
+                <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+            </div>
+        </section>
+        <section class="experience-card">
+            <h2 class="experience-title">Professional Experience</h2>
+            <div class="timeline">
+            </div>
+        </section>
+        
+        <section class="education-card">
+            <h2 class="education-title">Education</h2>
+            <div class="timeline">
+            </div>
+        </section>
+        <section id="projects" class="projects-section">
+            <h2 class="projects-title">My Projects</h2>
+            <div class="projects-grid"></div>
+        </section>
+        
+    </main>
+</body>
+</html>
