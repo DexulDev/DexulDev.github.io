@@ -6,38 +6,76 @@
     <title>Luis López | Portfolio</title>
     <style>
         :root {
-        --bg-color: #1a1b26;
-        --card-bg: rgba(30, 31, 42, 0.7);
-        --text-color: #a9b1d6;
-        --heading-color: #7aa2f7;
-        --border-color: rgba(122, 162, 247, 0.2);
-    }
-    
-    [data-theme="light"] {
-        --bg-color: #f0f2f5;
-        --card-bg: rgba(255, 255, 255, 0.9);
-        --text-color: #333;
-        --heading-color: #2563eb;
-        --border-color: rgba(37, 99, 235, 0.2);
-    }
-    
-    body {
-        font-family: 'Inter', sans-serif;
-        background-color: var(--bg-color);
-        color: var(--text-color);
-        min-height: 100vh;
-        padding: 2rem;
-    }
+            --bg-color: #1a1b26;
+            --card-bg: rgba(30, 31, 42, 0.7);
+            --text-color: #a9b1d6;
+            --heading-color: #7aa2f7;
+            --border-color: rgba(122, 162, 247, 0.2);
+        }
+        
+        [data-theme="light"] {
+            --bg-color: #f0f2f5;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --text-color: #333;
+            --heading-color: #2563eb;
+            --border-color: rgba(37, 99, 235, 0.2);
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            padding: 2rem;
+            margin: 0;
+        }
+
+        /* Estilos críticos para el contenido visible inicialmente */
+        .nav-right {
+            display: flex;
+            gap: 1rem;
+            background: var(--card-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+        }
+
+        .profile-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
     </style>
-    <link rel="stylesheet" href="styles.css" media="all" onload="this.media='all'">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" 
+          media="print" 
+          onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="styles.css">
+    </noscript>
+
+    <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+          media="print" 
+          onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" 
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </noscript>
+
+    <link rel="preload" as="image" href="images/profile-pic.webp">
+    
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
     <header>
         <nav>
-                <div class="nav-right"><button class="nav-icon" onclick="scrollToSection('#profile')">
+            <div class="nav-right">
+                <button class="nav-icon" onclick="scrollToSection('#profile')">
                     <i class="fas fa-home"></i>
                 </button>
                 <button class="nav-icon" onclick="scrollToSection('#projects')">
@@ -56,15 +94,26 @@
     <main>
         <section id="profile" class="profile-card">
             <div class="profile-header">
-                <img src="images/profile-pic.webp" alt="Profile Picture" class="profile-pic">
+                <img src="images/profile-pic.webp" 
+                     alt="Profile Picture" 
+                     class="profile-pic"
+                     width="120"
+                     height="120"
+                     loading="eager">
                 <h1>Hi! I'm Luis Eduardo López Cruz</h1>
                 <p class="subtitle">Backend Web Developer</p>
             </div>
             
             <div class="social-links">
-                <a href="mailto:personallopezcruzluis@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
-                <a href="https://github.com/DexulDev" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/luis-eduardo-lópez-cruz-766224333" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:personallopezcruzluis@gmail.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://github.com/DexulDev" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/luis-eduardo-lópez-cruz-766224333" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
             </div>
         </section>
 
@@ -86,22 +135,23 @@
                 <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
             </div>
         </section>
+
         <section class="experience-card">
             <h2 class="experience-title">Professional Experience</h2>
-            <div class="timeline">
-            </div>
+            <div class="timeline"></div>
         </section>
         
         <section class="education-card">
             <h2 class="education-title">Education</h2>
-            <div class="timeline">
-            </div>
+            <div class="timeline"></div>
         </section>
+
         <section id="projects" class="projects-section">
             <h2 class="projects-title">My Projects</h2>
             <div class="projects-grid"></div>
         </section>
-    <script src="app.js" defer></script>
     </main>
+
+    <script src="app.js" defer></script>
 </body>
 </html>
