@@ -133,7 +133,7 @@ h1 {
     margin: 1rem 0;
 }
 
-.project-technologies span {
+section .project-technologies span {
     background: var(--heading-color);
     color: rgb(0, 0, 0) !important;
     padding: 0.25rem 0.75rem;
