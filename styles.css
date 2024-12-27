@@ -133,11 +133,10 @@ h1 {
     margin: 1rem 0;
 }
 
-section .project-technologies span {
-    background: var(--heading-color);
-    padding: 0.25rem 0.75rem;
-    border-radius: 1rem;
+.project-technologies span {
     font-size: 0.875rem;
+    font-weight: normal !important;
+    text-rendering: optimizeLegibility !important;
 }
 
 .project-links {
