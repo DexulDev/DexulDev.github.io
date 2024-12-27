@@ -68,7 +68,7 @@
 
     </noscript>
 
-    <link rel="preload" as="image" href="images/profile-pic.webp">
+    <link rel="preload" as="image" href="images/profile-pic-480.webp">
     
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
@@ -99,10 +99,14 @@
                     <source srcset="images/profile-pic-320.webp" media="(max-width: 320px)">
                     <source srcset="images/profile-pic-480.webp" media="(max-width: 480px)">
                     <source srcset="images/profile-pic-800.webp" media="(max-width: 800px)">
-                    <img src="images/profile-pic.webp" 
+                    <img src="https://dexul.me/images/profile-pic-480.webp" 
                         alt="Profile Picture" 
-                        class="profile-pic"
+                        class="profile-pic" 
                         loading="eager"
+                        srcset="https://dexul.me/images/profile-pic-320.webp 320w,
+                                https://dexul.me/images/profile-pic-480.webp 480w,
+                                https://dexul.me/images/profile-pic-800.webp 800w" 
+                        sizes="(max-width: 600px) 320px, (max-width: 1024px) 480px, 800px" 
                         width="120" 
                         height="120">
                 </picture>
