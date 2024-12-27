@@ -157,7 +157,17 @@ function updateProjects(lang) {
             <h3>${project.title[lang]}</h3>
             <p>${project.description[lang]}</p>
             <div class="project-technologies">
-                ${project.technologies.map(tech => `<span>${tech}</span>`).join('')}
+                ${project.technologies.map(tech => `
+                    <span style="
+                        color: #000000 !important;
+                        background: var(--heading-color);
+                        padding: 0.25rem 0.75rem;
+                        border-radius: 1rem;
+                        font-size: 0.875rem;
+                    ">
+                        ${tech}
+                    </span>
+                `).join('')}
             </div>
             <div class="project-links">
                 <a href="${project.github}" target="_blank">
