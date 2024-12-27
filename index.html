@@ -68,8 +68,6 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 
     </noscript>
-
-    <link rel="preload" as="image" href="images/profile-pic-480.webp">
     
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
@@ -77,13 +75,13 @@
     <header>
         <nav>
             <div class="nav-right">
-                <button class="nav-icon" onclick="scrollToSection('#profile')" tabindex="0">
+                <button class="nav-icon" onclick="scrollToSection('#profile')" tabindex="0" aria-label="Ir a la sección de perfil">
                     <i class="fas fa-home"></i>
                 </button>
-                <button class="nav-icon" onclick="scrollToSection('#projects')" tabindex="0">
+                <button class="nav-icon" onclick="scrollToSection('#projects')" tabindex="0" aria-label="Ir a la sección de proyectos">
                     <i class="fas fa-code"></i>
                 </button>
-                <button class="theme-toggle" onclick="toggleTheme()" tabindex="0">
+                <button class="theme-toggle" onclick="toggleTheme()" tabindex="0" aria-label="Cambiar tema" aria-label="Cambiar idioma">
                     <i class="fas fa-moon"></i>
                 </button>
                 <button class="language-toggle" onclick="toggleLanguage()" tabindex="0">
@@ -130,7 +128,7 @@
 
         <section class="about-card">
             <h2>About me</h2>
-            <p>...</p>
+            <p>17-year-old Backend Web Developer with experience. I specialize in technologies like Laravel, MySQL, .NET, and ASP.NET. I'm focused on continuous learning to improve my skills and achieve my professional goals.</p>
         </section>
 
         <section class="skills-card">
