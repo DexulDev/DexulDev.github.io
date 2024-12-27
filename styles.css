@@ -169,7 +169,6 @@ h1 {
     }
 }
 
-/* Responsivo */
 @media (min-width: 768px) {
     main {
         max-width: 800px;
