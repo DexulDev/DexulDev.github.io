@@ -4,7 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luis López | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+        --bg-color: #1a1b26;
+        --card-bg: rgba(30, 31, 42, 0.7);
+        --text-color: #a9b1d6;
+        --heading-color: #7aa2f7;
+        --border-color: rgba(122, 162, 247, 0.2);
+    }
+    
+    [data-theme="light"] {
+        --bg-color: #f0f2f5;
+        --card-bg: rgba(255, 255, 255, 0.9);
+        --text-color: #333;
+        --heading-color: #2563eb;
+        --border-color: rgba(37, 99, 235, 0.2);
+    }
+    
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        min-height: 100vh;
+        padding: 2rem;
+    }
+    </style>
+    <link rel="stylesheet" href="styles.css" media="all" onload="this.media='all'">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
@@ -21,7 +47,6 @@
                     <i class="fas fa-moon"></i>
                 </button>
                 <button class="language-toggle" onclick="toggleLanguage()">
-                    <i class="fas fa-globe"></i>
                     <span class="language-text">EN</span>
                 </button>
             </div>
@@ -45,7 +70,7 @@
 
         <section class="about-card">
             <h2>About me</h2>
-            <p>Personal description here...</p>
+            <p>...</p>
         </section>
 
         <section class="skills-card">
