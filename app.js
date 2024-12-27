@@ -130,30 +130,39 @@ function updateTimeline(items, containerClass, lang) {
 }
 
 function changeLanguage(lang) {
-    document.querySelector('.profile-header h1').textContent = languages[lang].greeting;
-    document.querySelector('.profile-header .subtitle').textContent = languages[lang].role;
+    requestAnimationFrame(() => {
+        document.querySelector('.profile-header h1').textContent = languages[lang].greeting;
+    });
+    setTimeout(() => {
+        document.querySelector('.profile-header h1').textContent = languages[lang].greeting;
+        document.querySelector('.profile-header .subtitle').textContent = languages[lang].role;
+        
+        document.querySelector('.about-card h2').textContent = languages[lang].about;
+        document.querySelector('.projects-title').textContent = languages[lang].projects;
+        document.querySelector('.skills-card h2').textContent = languages[lang].skills;
+        document.querySelector('.experience-title').textContent = languages[lang].experience;
+        document.querySelector('.education-title').textContent = languages[lang].education;
+        document.querySelector('.about-card p').textContent = languages[lang].aboutText;
     
-    document.querySelector('.about-card h2').textContent = languages[lang].about;
-    document.querySelector('.projects-title').textContent = languages[lang].projects;
-    document.querySelector('.skills-card h2').textContent = languages[lang].skills;
-    document.querySelector('.experience-title').textContent = languages[lang].experience;
-    document.querySelector('.education-title').textContent = languages[lang].education;
-    document.querySelector('.about-card p').textContent = languages[lang].aboutText;
-
-    updateTimeline(experience, 'experience-card', lang);
-    updateTimeline(education, 'education-card', lang);
-    updateProjects(lang);
-
-    document.documentElement.setAttribute('lang', lang);
-    document.querySelector('.language-text').textContent = lang.toUpperCase();
-    localStorage.setItem('language', lang);
+        updateTimeline(experience, 'experience-card', lang);
+        updateTimeline(education, 'education-card', lang);
+        updateProjects(lang);
+    
+        document.documentElement.setAttribute('lang', lang);
+        document.querySelector('.language-text').textContent = lang.toUpperCase();
+        localStorage.setItem('language', lang);
+    }, 0);
 }
 
 function updateProjects(lang) {
     const projectsGrid = document.querySelector('.projects-grid');
     projectsGrid.innerHTML = projects.map(project => `
         <div class="project-card">
-            <img src="${project.image}" alt="${project.title[lang]}" class="project-image">
+            <img src="${project.image}" 
+                 alt="${project.title[lang]}" 
+                 class="project-image"
+                 loading="lazy"
+                 decoding="async">
             <h3>${project.title[lang]}</h3>
             <p>${project.description[lang]}</p>
             <div class="project-technologies">
