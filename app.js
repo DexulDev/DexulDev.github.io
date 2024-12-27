@@ -82,7 +82,7 @@ const projects = [
             en: "A mostly backend task management application built with Laravel and a simple frontend",
             es: "Una aplicación de gestión de tareas desarrollada con Laravel y un frontend algo simple"
         },
-        image: "images/project1.jpg",
+        image: "images/project1.webp",
         technologies: ["Laravel", "MySQL"],
         github: "https://github.com/DexulDev/Laravel-ToDoList",
         /* demo: "https://demo-link.com", */
@@ -96,7 +96,7 @@ const projects = [
             en: "A mostly backend user login and registration application, lacks other features but is a good starting point for larger projects.",
             es: "Una aplicación de inicio de sesión y registro de usuario, carece de otras funciones, pero es un buen punto de partida para proyectos más grandes."
         },
-        image: "images/project2.jpg",
+        image: "images/project2.webp",
         technologies: ["Laravel", "MySQL"],
         github: "https://github.com/DexulDev/Basic-login-and-register-with-Laravel",
         /* demo: "https://demo-link.com", */
@@ -110,7 +110,7 @@ const projects = [
             en: "A simple web app that fetches random fun cat facts from an API and displays them to the user along with a GIF that is searchable using the first 3 letters of the fact.",
             es: "Una aplicación web simple que obtiene aleatoriamente datos curiosos de gatos de una API y los muestra al usuario junto con un GIF que se busca con las primeras 3 letras del dato curioso."
         },
-        image: "images/project3.jpg",
+        image: "images/project3.webp",
         technologies: ["Laravel"],
         github: "https://github.com/DexulDev/Laravel-fun-cat-fact-and-gif",
         /* demo: "https://demo-link.com", */
