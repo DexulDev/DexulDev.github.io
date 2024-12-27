@@ -134,6 +134,10 @@ h1 {
 }
 
 .project-technologies span {
+    background: var(--heading-color);
+    color: rgb(0, 0, 0) !important;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
     font-size: 0.875rem;
     font-weight: normal !important;
     text-rendering: optimizeLegibility !important;
