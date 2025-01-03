@@ -59,7 +59,7 @@ const education = {
             date: "August/2022 - Present",
             title: "Programming",
             institution: "CBTis 265.",
-            description: "I'm studying at CBTis 265, Oaxaca, in the programming course, where I've learned and developed skills in various technologies, with a focus on backend programming and web development. Although most of my knowledge is self-taught."
+            description: "I'm studying at CBTis 265, Oaxaca, in the programming course, where I've learned and developed skills in some technologies, with a focus on essential programming and web development. Although most of my knowledge is self-taught."
         }
     ],
     es: [
@@ -67,7 +67,7 @@ const education = {
             date: "Agosto/2022 - Presente",
             title: "Programación",
             institution: "CBTis 265.",
-            description: "Estoy cursando mi educación en el CBTis 265, Oaxaca, en la carrera de programación, donde he aprendido y desarrollado habilidades en diversas tecnologías, con especial énfasis en programación backend y desarrollo web. Aunque mayormente todo mi conocimiento es por cuenta propia."
+            description: "Estoy cursando mi educación en el CBTis 265, Oaxaca, en la carrera de programación, donde he aprendido y desarrollado habilidades en algunas tecnologías, con especial énfasis en programación y desarrollo web. Aunque mayormente todo mi conocimiento es por cuenta propia."
         }
     ]
 };
