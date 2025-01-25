@@ -84,7 +84,7 @@ const projects = [
         },
         image: "images/project1.webp",
         technologies: ["Laravel", "MySQL"],
-        github: "https://github.com/DexulDev/Laravel-ToDoList",
+        github: "https://github.com/DexulDev/Tasker",
         /* demo: "https://demo-link.com", */
     },
     {
@@ -98,7 +98,7 @@ const projects = [
         },
         image: "images/project2.webp",
         technologies: ["Laravel", "MySQL"],
-        github: "https://github.com/DexulDev/Basic-login-and-register-with-Laravel",
+        github: "https://github.com/DexulDev/GateKeeper",
         /* demo: "https://demo-link.com", */
     },
     {
@@ -112,7 +112,7 @@ const projects = [
         },
         image: "images/project3.webp",
         technologies: ["Laravel"],
-        github: "https://github.com/DexulDev/Laravel-fun-cat-fact-and-gif",
+        github: "https://github.com/DexulDev/The-Cat-alog",
         /* demo: "https://demo-link.com", */
     }
 ];
