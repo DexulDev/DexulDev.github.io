@@ -252,7 +252,6 @@ function changeLanguage(lang) {
                 .map(p => `<p>${p.trim()}</p>`)
                 .join('');
             
-            console.log('About Me content updated:', aboutMeText.innerHTML.substring(0, 50) + '...');
         } else {
             console.warn('About Me text container not found!');
         }
