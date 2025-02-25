@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -6,142 +5,84 @@
     <meta name="description" lang="en" content="Explore the portfolio of Luis Eduardo López Cruz (DexulDev), a Backend Web Developer specializing in Laravel, MySQL, and API development. Discover my projects, skills, experience, and educational background.">
     <meta name="description" lang="es" content="Explora el portafolio de Luis Eduardo López Cruz (DexulDev), un desarrollador Backend especializado en Laravel, MySQL y desarrollo de APIs. Descubre mis proyectos, habilidades, experiencia y formación académica.">
     <title>Luis López | Portfolio</title>
-    <style>
-        :root {
-            --bg-color: #1a1b26;
-            --card-bg: rgba(30, 31, 42, 0.7);
-            --text-color: #a9b1d6;
-            --heading-color: #7aa2f7;
-            --border-color: rgba(122, 162, 247, 0.2);
-        }
-        
-        [data-theme="light"] {
-            --bg-color: #f0f2f5;
-            --card-bg: rgba(255, 255, 255, 0.9);
-            --text-color: #333;
-            --heading-color: #2563eb;
-            --border-color: rgba(37, 99, 235, 0.2);
-        }
-        
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            min-height: 100vh;
-            padding: 2rem;
-            margin: 0;
-        }
-
-        .nav-right {
-            display: flex;
-            gap: 1rem;
-            background: var(--card-bg);
-            padding: 0.5rem 1rem;
-            border-radius: 1rem;
-        }
-        
-        .profile-card {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .profile-pic {
-            width: 100%;
-            height: auto;
-            max-width: 120px;
-            border-radius: 50%;
-        }
-        .project-technologies span {
-            background: var(--heading-color);
-            color: rgb(0, 0, 0) !important;
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.875rem;
-            font-weight: normal !important;
-            text-rendering: optimizeLegibility !important;
-        }
-    </style>
-    
     <link rel="stylesheet" href="styles.css">
-
-    <link rel="stylesheet" 
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-          media="print" 
-          onload="this.media='all'">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
-            <div class="nav-right">
-                <button class="nav-icon" onclick="scrollToSection('#profile')" tabindex="0" aria-label="Ir a la sección de perfil">
-                    <i class="fas fa-home"></i>
-                </button>
-                <button class="nav-icon" onclick="scrollToSection('#projects')" tabindex="0" aria-label="Ir a la sección de proyectos">
-                    <i class="fas fa-code"></i>
-                </button>
-                <button class="theme-toggle" onclick="toggleTheme()" tabindex="0" aria-label="Cambiar tema" aria-label="Cambiar idioma">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <button class="language-toggle" onclick="toggleLanguage()" tabindex="0">
-                    <span class="language-text">EN</span>
-                </button>
+            <div class="nav-container">
+                <div class="nav-section nav-center">
+                    <button class="nav-icon" onclick="scrollToSection('#profile')" tabindex="0" aria-label="Ir a la sección de perfil">
+                        <i class="fas fa-home"></i>
+                        <span class="nav-text nav-text-home">Home</span>
+                    </button>
+                    <button class="nav-icon" onclick="scrollToSection('#about')" tabindex="0" aria-label="Ir a la sección de sobre mí">
+                        <i class="fas fa-user"></i>
+                        <span class="nav-text nav-text-about">About</span>
+                    </button>
+                    <button class="nav-icon" onclick="scrollToSection('.skills-card')" tabindex="0" aria-label="Ir a la sección de habilidades">
+                        <i class="fas fa-code"></i>
+                        <span class="nav-text nav-text-skills">Skills</span>
+                    </button>
+                    <button class="nav-icon" onclick="scrollToSection('#projects')" tabindex="0" aria-label="Ir a la sección de proyectos">
+                        <i class="fas fa-briefcase"></i>
+                        <span class="nav-text nav-text-projects">Projects</span>
+                    </button>
+                </div>
+                <div class="nav-section nav-right">
+                    <button class="theme-toggle" onclick="toggleTheme()" tabindex="0" aria-label="Cambiar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="language-toggle" onclick="toggleLanguage()" tabindex="0" aria-label="Cambiar idioma">
+                        <span class="language-text">EN</span>
+                    </button>
+                </div>
             </div>
         </nav>
     </header>
 
-    <main>
+    <main class="container">
         <section id="profile" class="profile-card">
             <div class="profile-header">
-                <picture>
-                    <source srcset="images/profile-pic-320.webp" media="(max-width: 320px)">
-                    <source srcset="images/profile-pic-480.webp" media="(max-width: 480px)">
-                    <source srcset="images/profile-pic-800.webp" media="(max-width: 800px)">
-                    <img src="https://dexul.me/images/profile-pic-480.webp" 
+                <div class="profile-pic-container">
+                    <img src="images/profile-pic-400.webp" 
                         alt="Profile Picture" 
                         class="profile-pic" 
                         loading="eager"
-                        srcset="https://dexul.me/images/profile-pic-320.webp 320w,
-                                https://dexul.me/images/profile-pic-480.webp 480w,
-                                https://dexul.me/images/profile-pic-800.webp 800w" 
-                        sizes="(max-width: 600px) 320px, (max-width: 1024px) 480px, 800px" 
-                        width="120" 
-                        height="120">
-                </picture>
-                <h1>Hi! I'm Luis Eduardo López Cruz</h1>
-                <p class="subtitle">Backend Web Developer</p>
+                        width="80" 
+                        height="80">
+                </div>
+                <div class="profile-info">
+                    <span class="open-to-work" id="open-to-work-badge">Open to work</span>
+                    <h1>Luis Eduardo López Cruz</h1>
+                    <p class="subtitle">Backend Web Developer</p>
+                    <p class="experience-text">Con experiencia. Técnico en programación y continuo estudiante, México 🇲🇽. Especializado en el desarrollo back-end con eficiencia y dedicación.</p>
+                </div>
             </div>
             
-            <div class="social-links">
-                <a href="mailto:personallopezcruzluis@gmail.com" class="social-icon" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://github.com/DexulDev" class="social-icon" aria-label="GitHub Profile">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/luis-eduardo-lópez-cruz-766224333" class="social-icon" aria-label="LinkedIn Profile">
-                    <i class="fab fa-linkedin"></i>
-                </a>
+            <div class="social-links-container">
+                <div class="social-links">
+                    <a href="mailto:personallopezcruzluis@gmail.com" class="social-icon" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://github.com/DexulDev" class="social-icon" aria-label="GitHub Profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/luis-eduardo-lópez-cruz-766224333" class="social-icon" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <button class="download-cv" onclick="downloadCV()" id="download-cv-btn">Mi CV</button>
             </div>
-        </section>
-
-        <section class="about-card">
-            <h2>About me</h2>
-            <p>...</p>
         </section>
 
         <section class="skills-card">
             <h2>Skills</h2>
             <div class="skills-grid">
-                <div class="skill-icon"><i class="fab fa-laravel"></i></div>
-                <div class="skill-icon"><i class="fab fa-php"></i></div>
-                <div class="skill-icon"><i class="fas fa-database"></i></div>
-                <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
-                <div class="skill-icon"><i class="fab fa-java"></i></div>
-                <div class="skill-icon"><i class="fab fa-js"></i></div>
-                <div class="skill-icon"><i class="fab fa-html5"></i></div>
-                <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                <!-- Skills will be populated by JavaScript -->
             </div>
         </section>
 
@@ -159,7 +100,26 @@
             <h2 class="projects-title">My Projects</h2>
             <div class="projects-grid"></div>
         </section>
+
+        <section id="about" class="about-me-card">
+            <h2>About me</h2>
+            <div class="about-me-content">
+                <img src="images/profile-pic-800.webp" 
+                     alt="Luis Eduardo López Cruz" 
+                     class="about-me-pic"
+                     loading="lazy"
+                     width="700"
+                     height="400">
+                <div class="about-me-text">
+                    <!-- About me content will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <p>© 2024 dexuldev. Casi todos los derechos reservados.</p>
+    </footer>
 
     <script defer src="app.js"></script>
 </body>
