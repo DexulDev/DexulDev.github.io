@@ -1,17 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self'; object-src 'none';">
-    <meta name="description" lang="en" content="Explore the portfolio of Luis Eduardo López Cruz (DexulDev), a Backend Web Developer specializing in Laravel, MySQL, and API development. Discover my projects, skills, experience, and educational background.">
-    <meta name="description" lang="es" content="Explora el portafolio de Luis Eduardo López Cruz (DexulDev), un desarrollador Backend especializado en Laravel, MySQL y desarrollo de APIs. Descubre mis proyectos, habilidades, experiencia y formación académica.">
-    <title>Luis López | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data:; connect-src 'self'; object-src 'none';">
+        <meta name="description" lang="en" content="Explore the portfolio of Luis Eduardo López Cruz (DexulDev), a Backend Web Developer specializing in Laravel, MySQL, and API development. Discover my projects, skills, experience, and educational background.">
+        <meta name="description" lang="es" content="Explora el portafolio de Luis Eduardo López Cruz (DexulDev), un desarrollador Backend especializado en Laravel, MySQL y desarrollo de APIs. Descubre mis proyectos, habilidades, experiencia y formación académica.">
+        <title>Luis López | Portfolio</title>
+        
+        <style>
+            @font-face {
+              font-family: "Font Awesome 6 Free";
+              font-style: normal;
+              font-weight: 900;
+              font-display: swap;
+              src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/webfonts/fa-solid-900.woff2") format("woff2");
+            }
+            
+            @font-face {
+              font-family: "Font Awesome 6 Brands";
+              font-style: normal;
+              font-weight: 400;
+              font-display: swap;
+              src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/webfonts/fa-brands-400.woff2") format("woff2");
+            }
+            
+            .fas, .fa-solid {
+              font-family: "Font Awesome 6 Free";
+              font-weight: 900;
+              font-style: normal;
+            }
+            
+            .fab, .fa-brands {
+              font-family: "Font Awesome 6 Brands";
+              font-weight: 400;
+              font-style: normal;
+            }
+    
+        /* Only the specific icons you use */
+        .fa-home:before { content: "\f015"; }
+        .fa-user:before { content: "\f007"; }
+        .fa-code:before { content: "\f121"; }
+        .fa-briefcase:before { content: "\f0b1"; }
+        .fa-moon:before { content: "\f186"; }
+        .fa-sun:before { content: "\f185"; }
+        .fa-envelope:before { content: "\f0e0"; }
+        .fa-database:before { content: "\f1c0"; }
+        .fa-html5:before { content: "\f13b"; }
+        .fa-css3-alt:before { content: "\f38b"; }
+        .fa-js:before { content: "\f3b8"; }
+        .fa-php:before { content: "\f457"; }
+        .fa-laravel:before { content: "\f3bd"; }
+        .fa-git-alt:before { content: "\f841"; }
+        .fa-windows:before { content: "\f17a"; }
+        .fa-mobile-alt:before { content: "\f3cd"; }
+        .fa-github:before { content: "\f09b"; }
+        .fa-linkedin:before { content: "\f08c"; }
+        </style>
+        
+        <!-- Keep your main stylesheet -->
+        <link rel="stylesheet" href="styles.css">
+        
+        <!-- REMOVE this Font Awesome link -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+        
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
 <body>
     <header>
         <nav>
