@@ -304,7 +304,26 @@ function updateProjects(lang) {
 function toggleLanguage() {
     const currentLang = document.documentElement.getAttribute('lang') || 'en';
     const newLang = currentLang === 'en' ? 'es' : 'en';
-    changeLanguage(newLang);
+    
+    const mainContent = document.querySelector('main');
+    mainContent.style.opacity = '0.5';
+    mainContent.style.transition = 'opacity 0.3s ease';
+    
+    const langButton = document.querySelector('.language-toggle');
+    if (langButton) {
+        langButton.classList.add('language-toggling');
+    }
+    
+    setTimeout(() => {
+        changeLanguage(newLang);
+        
+        setTimeout(() => {
+            mainContent.style.opacity = '1';
+            if (langButton) {
+                langButton.classList.remove('language-toggling');
+            }
+        }, 100);
+    }, 300);
 }
 
 function toggleTheme() {
