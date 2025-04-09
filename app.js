@@ -107,6 +107,20 @@ const education = {
 const projects = [
     {
         title: {
+            en: "LaraBilling",
+            es: "LaraBilling"
+        },
+        description: {
+            en: "A lightweight and efficient invoicing system built with Laravel 12. Features include invoice generation, client management, payment tracking, tax handling, and secure payment processing with Stripe.",
+            es: "Un sistema de facturación ligero y eficiente construido con Laravel 12. Incluye generación de facturas, gestión de clientes, seguimiento de pagos, manejo de impuestos y procesamiento de pagos seguro con Stripe."
+        },
+        image: "images/project4.webp",
+        technologies: ["Laravel", "Vue.js", "MySQL", "Stripe", "OAuth"],
+        github: "https://github.com/DexulDev/larabilling",
+        inProgress: true 
+    },
+    {
+        title: {
             en: "Task Manager App",
             es: "Aplicación de Gestión de Tareas"
         },
@@ -286,6 +300,9 @@ function updateProjects(lang) {
                  loading="lazy">
             <div class="project-content">
                 <h3>${project.title[lang]}</h3>
+                ${project.inProgress ? `<div class="project-status">
+                    <span>${lang === 'en' ? 'Work in Progress' : 'En Desarrollo'}</span>
+                </div>` : ''}
                 <p>${project.description[lang]}</p>
                 <div class="project-technologies">
                     ${project.technologies.map(tech => `<span>${tech}</span>`).join('')}
