@@ -25,7 +25,7 @@ While I am passionate about building structured and optimized solutions, I also 
         openToWork: "Open to work"
     },
     es: {
-        greeting: "Hola! Soy Luis Eduardo López Cruz",
+        greeting: "¡Hola! Soy Luis Eduardo López Cruz",
         role: "Desarrollador Web Backend",
         about: "Sobre mí",
         aboutText: "Desarrollador Web Backend de 17 años, con experiencia laboral. Me especializo en Laravel, aunque recientemente estoy aprendiendo .NET y ASP.NET. Estoy enfocado en seguir aprendiendo para mejorar mis habilidades y alcanzar mis metas profesionales.",
