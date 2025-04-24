@@ -135,8 +135,8 @@ const projects = [
     },
     {
         title: {
-            en: "Task Manager App",
-            es: "Aplicación de Gestión de Tareas"
+            en: "Tasker",
+            es: "Tasker"
         },
         description: {
             en: "A mostly backend task management application built with Laravel and a simple frontend",
@@ -148,8 +148,8 @@ const projects = [
     },
     {
         title: {
-            en: "Basic Login System",
-            es: "Aplicación de Inicio de Sesión Básica"
+            en: "GateKeeper",
+            es: "GateKeeper"
         },
         description: {
             en: "A mostly backend user login and registration application, lacks other features but is a good starting point for larger projects.",
@@ -159,19 +159,6 @@ const projects = [
         technologies: ["Laravel", "MySQL"],
         github: "https://github.com/DexulDev/GateKeeper",
     },
-    {
-        title: {
-            en: "Fun cat facts",
-            es: "Datos curiosos de gatos"
-        },
-        description: {
-            en: "A simple web app that fetches random fun cat facts from an API and displays them to the user along with a GIF that is searchable using the first 3 letters of the fact.",
-            es: "Una aplicación web simple que obtiene aleatoriamente datos curiosos de gatos de una API y los muestra al usuario junto con un GIF que se busca con las primeras 3 letras del dato curioso."
-        },
-        image: "images/project3.webp",
-        technologies: ["Laravel"],
-        github: "https://github.com/DexulDev/The-Cat-alog",
-    }
 ];
 
 
