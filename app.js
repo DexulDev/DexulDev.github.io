@@ -111,8 +111,8 @@ const projects = [
             es: "Cuidado-Newen"
         },
         description: {
-            en: "Cuidado-Newen is a search engine developed in Laravel 12, focused on querying existing data about food and exercises stored in a structured database. It was created as a personal and functional gift for my boyfriend, combining technology, health, and love 💙",
-            es: "Cuidado-Newen es un motor de búsqueda desarrollado en Laravel 12, enfocado en consultar datos ya existentes sobre alimentos y ejercicios almacenados en una base de datos estructurada. Fue creado como un regalo personal y funcional para mi novio, combinando tecnología, salud y amor 💙"
+            en: "Cuidado-Newen is a search engine developed in Laravel 12, focused on querying existing data about food and exercises stored in a structured database. It was created as a personal and functional gift for a school project of my partner, combining technology, health, and love 💙",
+            es: "Cuidado-Newen es un motor de búsqueda desarrollado en Laravel 12, enfocado en consultar datos ya existentes sobre alimentos y ejercicios almacenados en una base de datos estructurada. Fue creado como un regalo personal y funcional para un proyecto escolar de mi pareja, combinando tecnología, salud y amor 💙"
         },
         image: "images/project5.webp",
         technologies: ["Laravel", "Vue.js", "MySQL", "Bootstrap", "Tailwind CSS"],
