@@ -105,7 +105,7 @@ const education = {
 };
 
 const projects = [
-    {
+    /* {
         title: {
             en: "Cuidado-Newen",
             es: "Cuidado-Newen"
@@ -118,7 +118,7 @@ const projects = [
         technologies: ["Laravel", "Vue.js", "MySQL", "Bootstrap", "Tailwind CSS"],
         github: "https://github.com/DexulDev/Cuidado-Newen",
         inProgress: false
-    },
+    }, */
     {
         title: {
             en: "LaraBilling",
