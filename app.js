@@ -107,17 +107,17 @@ const education = {
 const projects = [
     {
         title: {
-            en: "Cuidado-Newen",
-            es: "Cuidado-Newen"
+            en: "AliFinder",
+            es: "AliFinder"
         },
         description: {
-            en: "Cuidado-Newen is a search engine developed in Laravel 12, focused on querying existing data about food and exercises stored in a structured database. It was created as a personal and functional gift for a school project of my partner, combining technology, health, and love 💙",
-            es: "Cuidado-Newen es un motor de búsqueda desarrollado en Laravel 12, enfocado en consultar datos ya existentes sobre alimentos y ejercicios almacenados en una base de datos estructurada. Fue creado como un regalo personal y funcional para un proyecto escolar de mi pareja, combinando tecnología, salud y amor 💙"
+            en: "A web scraping extension for AliExpress built with React and a Laravel backend, designed to find the best product based on custom criteria.",
+            es: "Una extensión de web scraping para AliExpress construida con React y un backend en Laravel, diseñada para encontrar el mejor producto según criterios personalizados."
         },
         image: "images/project5.webp",
-        technologies: ["Laravel", "Vue.js", "MySQL", "Bootstrap", "Tailwind CSS"],
-        github: "https://github.com/DexulDev/Cuidado-Newen",
-        inProgress: false
+        technologies: ["React", "Laravel 12", "SWC", "Vite", "Bootstrap"],
+        github: "https://github.com/DexulDev/AliFinder",
+        inWork: true,
     },
     {
         title: {
@@ -125,13 +125,15 @@ const projects = [
             es: "LaraBilling"
         },
         description: {
-            en: "A lightweight and efficient invoicing system built with Laravel 12. Features include invoice generation, client management, payment tracking, tax handling, and secure payment processing with Stripe.",
-            es: "Un sistema de facturación ligero y eficiente construido con Laravel 12. Incluye generación de facturas, gestión de clientes, seguimiento de pagos, manejo de impuestos y procesamiento de pagos seguro con Stripe."
+            /* Features include invoice generation, client management, payment tracking, tax handling, and secure payment processing with Stripe.  */
+            en: "A lightweight and efficient invoicing system built with Laravel 12. It is currently on hold until I turn 18 and can issue invoices, as doing so before could lead to legal issues with the tax authorities. I’d rather avoid any complications 😉.",
+            /* Incluye generación de facturas, gestión de clientes, seguimiento de pagos, manejo de impuestos y procesamiento de pagos seguro con Stripe. */
+            es: "Un sistema de facturación ligero y eficiente construido con Laravel 12. Actualmente está en pausa hasta que cumpla 18 años y pueda emitir facturas, ya que hacerlo antes podría generar problemas legales con Hacienda. No quiero complicaciones 😉."
         },
         image: "images/project4.webp",
-        technologies: ["Laravel", "Vue.js", "MySQL", "Stripe", "OAuth"],
+        technologies: ["Laravel 12", "MySQL", "Stripe", "OAuth", "Vue.js", "Tailwind CSS"],
         github: "https://github.com/DexulDev/larabilling",
-        inProgress: true 
+        inPause: true,
     },
     {
         title: {
@@ -143,7 +145,7 @@ const projects = [
             es: "Una aplicación de gestión de tareas desarrollada con Laravel y un frontend algo simple"
         },
         image: "images/project1.webp",
-        technologies: ["Laravel", "MySQL"],
+        technologies: ["Laravel 11", "MySQL"],
         github: "https://github.com/DexulDev/Tasker",
     },
     {
@@ -156,7 +158,7 @@ const projects = [
             es: "Una aplicación de inicio de sesión y registro de usuario, carece de otras funciones, pero es un buen punto de partida para proyectos más grandes."
         },
         image: "images/project2.webp",
-        technologies: ["Laravel", "MySQL"],
+        technologies: ["Laravel 11", "MySQL"],
         github: "https://github.com/DexulDev/GateKeeper",
     },
 ];
@@ -301,8 +303,11 @@ function updateProjects(lang) {
                  loading="lazy">
             <div class="project-content">
                 <h3>${project.title[lang]}</h3>
-                ${project.inProgress ? `<div class="project-status">
-                    <span>${lang === 'en' ? 'Work in Progress' : 'En Desarrollo'}</span>
+                ${project.inPause ? `<div class="project-status status-paused">
+                    <span>${lang === 'en' ? 'Paused' : 'En Pausa'}</span>
+                </div>` : ''}
+                ${project.inWork ? `<div class="project-status status-wip">
+                    <span>${lang === 'en' ? 'WIP' : 'En Desarrollo'}</span>
                 </div>` : ''}
                 <p>${project.description[lang]}</p>
                 <div class="project-technologies">

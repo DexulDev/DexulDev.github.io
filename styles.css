@@ -284,14 +284,23 @@ nav {
     margin-bottom: 1rem;
 }
 
-.project-status span {
+.status-paused span {
+    background: rgba(255, 7, 7, 0.2);
+    color: #ff0000;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+.status-wip span {
     background: rgba(255, 193, 7, 0.2);
     color: #ff9800;
+    border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.project-status span {
     font-size: 0.8rem;
     font-weight: 600;
     padding: 0.3rem 0.7rem;
     border-radius: 4px;
-    border: 1px solid rgba(255, 152, 0, 0.3);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     display: inline-block;
