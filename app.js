@@ -121,22 +121,6 @@ const projects = [
     },
     {
         title: {
-            en: "LaraBilling",
-            es: "LaraBilling"
-        },
-        description: {
-            /* Features include invoice generation, client management, payment tracking, tax handling, and secure payment processing with Stripe.  */
-            en: "A lightweight and efficient invoicing system built with Laravel 12. It is currently on hold until I turn 18 and can issue invoices, as doing so before could lead to legal issues with the tax authorities. I’d rather avoid any complications 😉.",
-            /* Incluye generación de facturas, gestión de clientes, seguimiento de pagos, manejo de impuestos y procesamiento de pagos seguro con Stripe. */
-            es: "Un sistema de facturación ligero y eficiente construido con Laravel 12. Actualmente está en pausa hasta que cumpla 18 años y pueda emitir facturas, ya que hacerlo antes podría generar problemas legales con Hacienda. No quiero complicaciones 😉."
-        },
-        image: "images/project4.webp",
-        technologies: ["Laravel 12", "MySQL", "Stripe", "OAuth", "Vue.js", "Tailwind CSS"],
-        github: "https://github.com/DexulDev/larabilling",
-        inPause: true,
-    },
-    {
-        title: {
             en: "Tasker",
             es: "Tasker"
         },
