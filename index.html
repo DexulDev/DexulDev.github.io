@@ -7,6 +7,16 @@
         <meta name="description" lang="es" content="Explora el portafolio de Luis Eduardo López Cruz (DexulDev), un desarrollador Backend especializado en Laravel, MySQL y desarrollo de APIs. Descubre mis proyectos, habilidades, experiencia y formación académica.">
         <title>Luis López | Portfolio</title>
         
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+        <link rel="dns-prefetch" href="//github.com">
+        <link rel="dns-prefetch" href="//linkedin.com">
+        
+        <link rel="preload" href="images/profile-pic-400.webp" as="image" type="image/webp">
+        <link rel="preload" href="styles.css" as="style">
+        <link rel="preload" href="app.js" as="script">
+        
         <style>
             @font-face {
               font-family: "Font Awesome 6 Free";
@@ -36,7 +46,6 @@
               font-style: normal;
             }
     
-        /* Only the specific icons you use */
         .fa-home:before { content: "\f015"; }
         .fa-user:before { content: "\f007"; }
         .fa-code:before { content: "\f121"; }
@@ -57,11 +66,7 @@
         .fa-linkedin:before { content: "\f08c"; }
         </style>
         
-        <!-- Keep your main stylesheet -->
         <link rel="stylesheet" href="styles.css">
-        
-        <!-- REMOVE this Font Awesome link -->
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
         
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -75,10 +80,6 @@
                         <i class="fas fa-home"></i>
                         <span class="nav-text nav-text-home">Home</span>
                     </button>
-                    <button class="nav-icon" onclick="scrollToSection('#about')" tabindex="0" aria-label="Ir a la sección de sobre mí">
-                        <i class="fas fa-user"></i>
-                        <span class="nav-text nav-text-about">About</span>
-                    </button>
                     <button class="nav-icon" onclick="scrollToSection('.skills-card')" tabindex="0" aria-label="Ir a la sección de habilidades">
                         <i class="fas fa-code"></i>
                         <span class="nav-text nav-text-skills">Skills</span>
@@ -86,6 +87,10 @@
                     <button class="nav-icon" onclick="scrollToSection('#projects')" tabindex="0" aria-label="Ir a la sección de proyectos">
                         <i class="fas fa-briefcase"></i>
                         <span class="nav-text nav-text-projects">Projects</span>
+                    </button>
+                    <button class="nav-icon" onclick="scrollToSection('#about')" tabindex="0" aria-label="Ir a la sección de sobre mí">
+                        <i class="fas fa-user"></i>
+                        <span class="nav-text nav-text-about">About</span>
                     </button>
                 </div>
                 <div class="nav-section nav-right">
@@ -115,7 +120,7 @@
                     <span class="open-to-work" id="open-to-work-badge">Open to work</span>
                     <h1>Luis Eduardo López Cruz</h1>
                     <p class="subtitle">Backend Web Developer</p>
-                    <p class="experience-text">Con experiencia. Técnico en programación y continuo estudiante, México 🇲🇽. Especializado en el desarrollo back-end con eficiencia y dedicación.</p>
+                    <p class="experience-text">Con experiencia laboral comprobable. Técnico en programación graduado y estudiante de Ingeniería en Sistemas Computacionales, México 🇲🇽. Especializado en el desarrollo back-end con eficiencia y dedicación.</p>
                 </div>
             </div>
             
@@ -174,7 +179,7 @@
     </main>
 
     <footer>
-        <p>© 2025 dexuldev. Casi todos los derechos reservados.</p>
+        <p>© 2025 dexuldev. Todos los derechos reservados.</p>
     </footer>
 
     <script defer src="app.js"></script>
