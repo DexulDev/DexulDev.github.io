@@ -529,13 +529,29 @@ function animateSkillBadgesBatch(badges) {
 }
 
 function downloadCV() {
-    const currentLang = document.documentElement.getAttribute('lang') || 'es';
-
-    const fileName = currentLang === 'en' 
-        ? 'CV/CV_LuisEduardoLopezCruz_EN.pdf' 
-        : 'CV/CV_LuisEduardoLopezCruz_ES.pdf';
+    const fileName = 'CV/CV_LuisEduardoLopezCruz.pdf';
     
-    window.open(fileName, '_blank');
+    try {
+        const newWindow = window.open(fileName, '_blank');
+        
+        if (!newWindow) {
+            const link = document.createElement('a');
+            link.href = fileName;
+            link.download = fileName;
+            link.target = '_blank';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    } catch (error) {
+        console.error('Error al abrir el CV:', error);
+        const link = document.createElement('a');
+        link.href = fileName;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
 }
 
 function updateTimeline(items, selector, lang) {
