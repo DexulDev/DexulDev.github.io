@@ -238,20 +238,6 @@ const education = {
 const projects = [
     {
         title: {
-            en: "AliFinder",
-            es: "AliFinder"
-        },
-        description: {
-            en: "A web scraping extension for AliExpress built with React and a Laravel backend, designed to find the best product based on custom criteria.",
-            es: "Una extensión de web scraping para AliExpress construida con React y un backend en Laravel, diseñada para encontrar el mejor producto según criterios personalizados."
-        },
-        image: "images/project5.webp",
-        technologies: ["React", "Laravel 12", "SWC", "Vite", "Bootstrap"],
-        github: "https://github.com/DexulDev/AliFinder",
-        inWork: true,
-    },
-    {
-        title: {
             en: "Tasker",
             es: "Tasker"
         },

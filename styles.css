@@ -331,8 +331,8 @@ nav {
 }
 
 .profile-pic {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--accent-color);
@@ -341,7 +341,7 @@ nav {
 }
 
 .profile-pic:hover {
-    transform: scale(1.05);
+    transform: scale(1.15) rotate(0.5deg);
 }
 
 .profile-info {
@@ -1445,20 +1445,6 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--accent-color);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.profile-pic:hover {
-    transform: scale(1.05);
 }
 
 .profile-info {
