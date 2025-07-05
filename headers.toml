@@ -5,11 +5,18 @@
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
+    # Performance headers
+    X-DNS-Prefetch-Control = "on"
+    X-Permitted-Cross-Domain-Policies = "none"
+    Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[headers]]
   path = "/images/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable" # 1 year
+    Cache-Control = "public, max-age=86400" # 1 day for images
+    # Image optimization headers
+    Accept-CH = "DPR, Viewport-Width, Width"
+    Vary = "Accept"
 
 [[headers]]
   path = "/*.css"
@@ -31,3 +38,22 @@
   path = "/*.cloudflare*.js"
   [headers.values]
     Cache-Control = "public, max-age=31536000" # 1 year
+
+# HTML caching (short cache for dynamic updates)
+[[headers]]
+  path = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600" # 1 hour
+
+# Font files optimization
+[[headers]]
+  path = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  path = "/*.woff"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
