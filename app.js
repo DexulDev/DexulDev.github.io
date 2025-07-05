@@ -29,7 +29,10 @@ Currently, I am pursuing a Bachelor's Degree in Computer Systems Engineering at 
         skillsMobile: "Mobile",
         skillsTools: "Tools & Others",
         currentlyLearning: "Currently Learning & Improving",
-        skillsTitle: "Skills"
+        skillsTitle: "Skills",
+        // Add keyboard hint translations
+        keyboardHintText: "Tip! Use arrow keys to navigate between sections",
+        keyboardHintButton: "Got it"
     },
     es: {
         greeting: "¡Hola! Soy Luis Eduardo López Cruz",
@@ -61,7 +64,10 @@ Actualmente, curso la carrera de Ingeniería en Sistemas Computacionales en el I
         skillsMobile: "Móvil",
         skillsTools: "Herramientas y Otros",
         currentlyLearning: "Actualmente Aprendiendo y Mejorando",
-        skillsTitle: "Habilidades"
+        skillsTitle: "Habilidades",
+        // Add keyboard hint translations
+        keyboardHintText: "¡Tip! Usa las flechas del teclado para navegar entre secciones",
+        keyboardHintButton: "Entendido"
     }
 };
 
@@ -266,7 +272,7 @@ const projects = [
 
 
 function updateSkills() {
-    const currentLang = document.documentElement.getAttribute('lang') || 'es';
+    const currentLang = document.documentElement.getAttribute('lang') || 'en';
     const skillsGrid = document.querySelector('.skills-grid');
     
     // Mark as loading to hide badges initially
@@ -766,7 +772,7 @@ function updateProjects(lang) {
 }
 
 function toggleLanguage() {
-    const currentLang = document.documentElement.getAttribute('lang') || 'en';
+    const currentLang = document.documentElement.getAttribute('lang') || 'en'; // Changed default to 'en'
     const newLang = currentLang === 'en' ? 'es' : 'en';
     
     // Set language change state
@@ -869,8 +875,8 @@ document.addEventListener('DOMContentLoaded', () => {
         themeIcon.className = `fas fa-${savedTheme === 'light' ? 'moon' : 'sun'}`;
     }
     
-    // Set up language without animations
-    const savedLanguage = localStorage.getItem('language') || 'es';
+    // Set up language without animations - changed default to English
+    const savedLanguage = localStorage.getItem('language') || 'en';
     setLanguageChangeState(true); // Prevent initial animations
     
     changeLanguage(savedLanguage);
@@ -884,8 +890,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize active navigation
     updateActiveNavigation();
     
-    // Show keyboard hint for new users
-    showKeyboardHint();
+    // Remove the keyboard hint call - keyboard navigation still works
+    // showKeyboardHint();
     
     // Clear language change state and start animations after everything is loaded
     setTimeout(() => {
@@ -960,33 +966,6 @@ window.addEventListener('scroll', () => {
     }, 100);
 });
 
-// Show keyboard navigation hint on first visit
-function showKeyboardHint() {
-    const hasSeenHint = localStorage.getItem('keyboard-hint-seen');
-    if (!hasSeenHint) {
-        setTimeout(() => {
-            const hint = document.createElement('div');
-            hint.className = 'keyboard-hint';
-            hint.innerHTML = `
-                <div class="hint-content">
-                    <i class="fas fa-keyboard"></i>
-                    <p>¡Tip! Usa las flechas del teclado para navegar entre secciones</p>
-                    <button onclick="this.parentElement.parentElement.remove(); localStorage.setItem('keyboard-hint-seen', 'true');">Entendido</button>
-                </div>
-            `;
-            document.body.appendChild(hint);
-            
-            // Auto-hide after 5 seconds
-            setTimeout(() => {
-                if (hint.parentElement) {
-                    hint.remove();
-                    localStorage.setItem('keyboard-hint-seen', 'true');
-                }
-            }, 5000);
-        }, 3000); // Show after 3 seconds
-    }
-}
-
 // Function to animate learning items separately
 function animateLearningItems(items) {
     if (!items || items.length === 0) return;
@@ -1016,5 +995,3 @@ function animateLearningItems(items) {
         });
     }, totalDuration);
 }
-
-showKeyboardHint();
